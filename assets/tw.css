@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .site-grid {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+        grid-template-columns: theme(gridTemplateColumns.site);
+        grid-template-rows: theme(gridTemplateRows.site);
+
+        @media screen(lg) {
+            grid-template-areas:
+                "sidebar header header"
+                "sidebar main main"
+                "sidebar footer footer";
+        }
+    }
+
+    .grid-in-header {
+        grid-area: header;
+    }
+
+    
+
+    .grid-in-main {
+        grid-area: main;
+    }
+}
